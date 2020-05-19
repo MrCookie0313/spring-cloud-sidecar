@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-cloud-alibaba-sidecar-nacos-example</artifactId>
+    <artifactId>spring-cloud-sidecar</artifactId>
     <name>Spring Cloud Starter Alibaba Sidecar x Nacos Example</name>
     <description>Example demonstrating how to use Spring Cloud Alibaba Sidecar with nacos</description>
     <packaging>jar</packaging>
