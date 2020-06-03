@@ -2,7 +2,7 @@ server:
   port: 9021
 
 nacos:
-  server-addr: 127.0.0.1:8848
+  server-addr: nacos-dev.irdc.sensetime.com:80
 
 
 spring:
