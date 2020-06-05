@@ -1,0 +1,30 @@
+stages:
+  - code_scan
+  - docker
+
+job_code_scan1:
+  image: registry.sensetime.com/security/codescan:latest
+  stage: code_scan
+  script:
+    - sonar_scan.sh
+  tags:
+    - k8s
+    
+job_code_scan2:
+  image: registry.sensetime.com/security/codescan:latest
+  stage: code_scan
+  script:
+    - sonar_full_scan.sh
+  tags:
+    - k8s
+  only:
+    - dev
+
+docker:
+  image: registry.sensetime.com/ips-devops/docker:19.03.1
+  stage: docker
+  script:
+    - make image push
+  services:
+    - docker:19.03.1-dind
+  
