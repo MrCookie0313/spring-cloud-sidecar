@@ -12,4 +12,4 @@ COPY --from=builder /app/target/*.jar /app
 RUN find -name "*.jar" -exec ln -s {} app.jar \;
 ENV JAVA_OPTS="-XX:MetaspaceSize=128m -XX:MaxMetaspaceSize=512m -Xms512m -Xmx512m -Xmn256m -Xss256k -XX:SurvivorRatio=8 -XX:+UseConcMarkSweepGC"
 
-CMD ["/usr/bin/java", "-jar", "app.jar", "--spring.config.location=/config"]
+CMD ["/usr/bin/java", "-jar", "app.jar", "--spring.config.location=/config/"]
