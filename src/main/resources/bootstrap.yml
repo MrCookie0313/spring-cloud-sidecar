@@ -1,21 +1,11 @@
-server:
-  port: 9021
-
-nacos:
-  server-addr: nacos-dev.irdc.sensetime.com:80
-
-
 spring:
   application:
-    name: sidecar-service
+    name: PORTAL-NEWS-SIDECAR
   cloud:
     nacos:
-      config:
-        server-addr: ${nacos.server-addr}
-        file-extension: yml
-      discovery:
-        server-addr: ${nacos.server-addr}
-
+      server-addr: 127.0.0.1:8848
+server:
+  port: 8087
 management:
   info:
     defaults:
